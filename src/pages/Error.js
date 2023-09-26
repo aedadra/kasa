@@ -1,12 +1,13 @@
-import "../styles/Error.scss"
+import ImgError from "../images/404.png"
 import "./Home"
+import "../styles/Error.scss"
 
 function Error() {
     return (
-        <div>
-            <h1>404</h1>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
-                <a href="/">Retourner sur la page d'accueil</a>
+        <div className="error-page">
+                <img src={ImgError} alt=""/>
+                <p className="error-page__text error-page__p">Oups! La page que vous demandez n'existe pas.</p>
+                <a className="error-page__text error-page__lien" href="/">Retourner sur la page d'accueil</a>
         </div>
     )
 }

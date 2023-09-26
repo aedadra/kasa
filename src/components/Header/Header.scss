@@ -1,0 +1,33 @@
+@import "../Mixin.scss";
+
+.header {
+    margin: 50px;
+    
+    &-logo{
+        width: 210px;
+        height: 68px;  
+        @media (max-width: 700px) { 
+            width: 145px;
+            height: 47px;     
+        }  
+    }
+    &__nav{
+        width: fit-content;
+        justify-content: flex-end;
+    }
+    &__nav a {
+        @include font;
+        color: $mainColor;
+        text-decoration: underline;
+        font-size: 24px;
+        padding-left: 57px;
+        @media (max-width: 700px) {
+            font-size: 12px;
+        }   
+    }
+    &-display {
+        @include space;
+        align-items: center;
+    }
+}
+

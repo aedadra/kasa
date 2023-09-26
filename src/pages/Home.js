@@ -1,30 +1,35 @@
-import '../styles/Home.scss';
-import ImgHome from '../components/home/img-home';
-import Logements from '../components/fetch';
-import LogementsUpdated from '../components/logement-id';
-
-
-
-
- 
-
+import Banner from '../components/home/banner';
+import Card from '../components/Card/Card';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import "../styles/Home.scss"
 
 
 
 function Home() {
 
+const [gallery, setGallery] = useState ([])
   
- 
+useEffect (() => {fetch ("/logements.json")
+        
+ .then((response) => response.json ())
+ .then((data) => { setGallery (data)
+ })
+ .catch ((error) => console.log (error))
+})
 
   return (
     <div>
-      <ImgHome />
-   <div>
-   
-    </div>
-  
-   <Logements />
-   <LogementsUpdated />
+      <Banner />
+      <div className='gallery-container'>
+        {gallery.map((logement, id) =>
+          <div key={id} className='gallery-container__card'>
+            <Link to={`./LogementsDetails/${logement.id}`}>
+            <Card cover={logement.cover} title={logement.title} />
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

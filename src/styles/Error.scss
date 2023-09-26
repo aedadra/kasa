@@ -1,0 +1,19 @@
+@import "../components/Mixin.scss";
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    &__text {
+        @include font;
+        color: $mainColor;
+        margin: 35px;
+    }
+    &__p {
+        font-size: 36px;
+    }
+    &__lien {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,59 @@
+@import "../components/Mixin.scss";
+
+.logement-page {
+    margin: 50px;
+    &__text h1 {
+        margin-bottom: 0;
+    }
+    &__display {
+        @include space;
+        margin-bottom: 50px;
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__title {
+        color: $mainColor;
+        @include font;
+        font-size: 36px;
+    }
+    &__location {
+        color: $mainColor;
+        @include font;
+        font-size: 18px;
+    }
+    &__tags {
+        display: flex;
+    }
+    &__host {
+        @media (max-width: 700px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-content: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+    }
+    &__collapse--description {
+        @media (max-width: 700px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__collapse--equipements, &__collapse--description {
+        width: 40%;
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+

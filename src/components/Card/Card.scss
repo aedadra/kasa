@@ -1,0 +1,25 @@
+@import "../Mixin.scss";
+
+.logement-card {
+    @include fullScreen;
+    position: relative;
+    align-items: center;
+    &__img {
+        position: absolute;
+        z-index: 0;
+        @include fullScreen
+    }
+    &__div{    
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;
+        @include fullScreen;
+        margin-left: 10px;
+    }
+    &__title{
+        @include font; 
+        font-size: 18px;
+     }
+ 
+}

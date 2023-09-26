@@ -1,0 +1,13 @@
+@import "../Mixin.scss";
+
+.tag {
+    width:fit-content ;
+    height: 25px;
+    border-radius: 10px;
+    color: white;
+    background-color: $mainColor;
+    @include display;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

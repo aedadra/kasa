@@ -1,0 +1,53 @@
+@import "../Mixin.scss";
+
+.carrousel{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+
+    &__vector{
+        @include fullScreen;
+        position: absolute;   
+    }
+    &__vector2 {
+        height: 100%;
+        width: 97%;
+        position: relative;
+        z-index: 1;
+        @include space;
+        align-items: center;
+        padding-left: 22px;
+        @media (max-width: 700px) {
+            width: 93%;
+        }
+    }
+    &__image {
+        position: absolute;
+        z-index: 0;
+        @include fullScreen;
+    }
+    &__image img {
+        @include fullScreen;
+        object-fit: fill;
+        border-radius: 25px;
+        position: relative;
+    }
+    &__index {
+        @include fullScreen;
+        position: absolute;
+        z-index: 0;
+    }
+    &__index--position {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: white;
+        font-size: 18px;
+        @include font;
+    }
+}
+

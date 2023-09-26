@@ -1,20 +1,17 @@
-.DropdownClose {
-    background-color: rosybrown;
-    display: block;
-    border: none;
+@import "../components/Mixin.scss";
+
+.about-page {
+    margin: 50px;
+    &__elements {
+       display:flex;
+       flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        height: 223px;
+        border-radius: 25px;
+        margin-bottom: 23px;
+    }
 }
-
-.DropdownOpen {
-    background-color: rosybrown;
-    display: block;
-    border: none;
-}
-
-.openIt {
-    background-color: aqua;
-    color: white;
-}
-
-
-
-

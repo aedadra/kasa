@@ -1,3 +1,6 @@
+@use "../components/Mixin.scss";
+
+
 .App {
   text-align: center;
 }
@@ -5,6 +8,36 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body {
+  margin: 0
+}
+
+.gallery-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  @media (max-width: 700px) {
+    flex-direction: column;
+}
+  &__card {
+    width: 28%;
+    height:340px;
+    margin: 2.5%;
+    @media (max-width: 700px) {
+      width: 95%;
+    }
+  }
+  &__card a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

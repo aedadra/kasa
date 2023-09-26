@@ -1,0 +1,9 @@
+@import "../Mixin.scss";
+
+.footer {
+    background-color: black;
+    width: 100%;
+    @include display;
+
+}
+
