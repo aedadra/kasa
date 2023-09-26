@@ -25,7 +25,8 @@ body {
   margin-bottom: 50px;
   @media (max-width: 700px) {
     flex-direction: column;
-}
+    background-color: inherit;
+  }
   &__card {
     width: 28%;
     height:340px;
@@ -33,6 +34,9 @@ body {
     @media (max-width: 700px) {
       width: 95%;
     }
+  }
+  &__card :hover {
+    transform: scale(1.05);
   }
   &__card a {
     text-decoration: none;

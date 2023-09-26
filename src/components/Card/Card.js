@@ -1,8 +1,8 @@
 import "../Mixin.scss"
 import "./Card.scss"
 
-function Card ({cover, title}) {
-    return (
+function Card({ cover, title }) {
+	return (
 		<article className="logement-card">
 			<img className="logement-card__img" src={cover} alt="location" />
 			<div className="logement-card__div">
@@ -11,6 +11,7 @@ function Card ({cover, title}) {
 		</article>
 	);
 }
+
 export default Card
 
 

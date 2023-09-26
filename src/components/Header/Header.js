@@ -4,6 +4,7 @@ import "../Mixin.scss"
 import "./Header.scss"
 
 function Header() {
+
     return (
         <div className='header header-display'>
             <Link to="../"> <img src={Logo} alt="logo" className='header-logo' /></Link>

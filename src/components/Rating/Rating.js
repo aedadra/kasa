@@ -3,13 +3,13 @@ import EmptyStar from "../../images/inactive-star.png"
 import "../Mixin.scss"
 import "./Rating.scss"
 
-function Rating ({note}) {
-    const stars = [1, 2, 3, 4, 5];
+function Rating({ note }) {
+	const stars = [1, 2, 3, 4, 5];
 	return (
 		<div className="stars">
 			{stars.map((level) =>
 				note >= level ? (
-					<img 
+					<img
 						key={level.toString()}
 						src={FullStar}
 						alt="rating star"
@@ -21,13 +21,11 @@ function Rating ({note}) {
 						className="stars empty-star"
 						src={EmptyStar}
 						alt="rating star"
-						
 					/>
 				)
 			)}
 		</div>
 	);
-
 }
 
 export default Rating

@@ -4,19 +4,19 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/Home.scss"
 
-
-
 function Home() {
 
-const [gallery, setGallery] = useState ([])
-  
-useEffect (() => {fetch ("/logements.json")
-        
- .then((response) => response.json ())
- .then((data) => { setGallery (data)
- })
- .catch ((error) => console.log (error))
-})
+  const [gallery, setGallery] = useState([])
+
+  useEffect(() => {
+    fetch("/logements.json")
+
+    .then((response) => response.json())
+    .then((data) => {
+      setGallery(data)
+    })
+    .catch((error) => console.log(error))
+  })
 
   return (
     <div>
@@ -25,7 +25,7 @@ useEffect (() => {fetch ("/logements.json")
         {gallery.map((logement, id) =>
           <div key={id} className='gallery-container__card'>
             <Link to={`./LogementsDetails/${logement.id}`}>
-            <Card cover={logement.cover} title={logement.title} />
+              <Card cover={logement.cover} title={logement.title} />
             </Link>
           </div>
         )}

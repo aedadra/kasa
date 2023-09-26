@@ -37,12 +37,10 @@
         text-align: justify;
         margin-top: 0;
         padding: 10px;
-    }
         @media (max-width: 700px) {
             font-size: 12px;
         }
-        
-    
+    }    
     &__p li {
         list-style: none;
     }
