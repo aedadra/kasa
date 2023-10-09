@@ -30,7 +30,7 @@ function LogementDetails() {
 
 	const carrousel = logementDetails && logementDetails.pictures;
 	const tags = logementDetails && logementDetails.tags;
-	const equipements = logementDetails && logementDetails.equipments.map((equipments) => { return (<li>{equipments}</li>) })
+	const equipements = logementDetails && logementDetails.equipments.map((equipments, index) => { return (<li key={index}>{equipments}</li>) })
 
 	return (
 		<div className="logement-page" key={params.id} >
@@ -60,7 +60,7 @@ function LogementDetails() {
 							</div>
 						</div>
 					</div>
-					<div className="logement-page__collapse logement-page__display">
+					<div className="logement-page__collapse">
 						<div className="logement-page__collapse--description">
 							<Collapse title="Description" content={logementDetails.description} />
 						</div>

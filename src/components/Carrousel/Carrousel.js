@@ -29,8 +29,8 @@ function Carrousel({ carrousel }) {
 			</div>
 			{carrousel.map((carrousel, index) => {
 				return (
-					<div>
-						<div key={index} className="carrousel__image" >
+					<div key={index}>
+						<div className="carrousel__image" >
 							{index === image && (
 								<img src={carrousel} alt="img-appartement" />
 							)}

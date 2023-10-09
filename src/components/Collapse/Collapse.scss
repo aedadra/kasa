@@ -1,11 +1,9 @@
 @import "../Mixin.scss";
 
 .collapse{
-    width: 75%;
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 15px;
     @media (max-width: 700px) {
         width: 100%;
     }
@@ -13,6 +11,10 @@
         @include space;
         background-color: $mainColor;
         align-items: center;
+        border-radius: 10px;
+        @media (max-width: 700px) {
+            border-radius: 5px;
+        }
     }
     &__title h1 {
         @include font;
@@ -27,6 +29,9 @@
         background-color: $mainColor;
         border: none;
     }
+    &__button:hover {
+        cursor: pointer;
+    }
     &__p {
         position: relative;
         color: $mainColor;
@@ -37,8 +42,12 @@
         text-align: justify;
         margin-top: 0;
         padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         @media (max-width: 700px) {
             font-size: 12px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
     }    
     &__p li {

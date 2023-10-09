@@ -44,13 +44,23 @@
             margin-bottom: 40px;
         }
     }
+    &__collapse {
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 0px;
+        }
+    }
     &__collapse--equipements, &__collapse--description {
-        width: 40%;
+        width: 60%;
         @media (max-width: 700px) {
             width: 100%;
         }
     }
 }
+
 
 
 

@@ -25,6 +25,9 @@
             width: 93%;
         }
     }
+    &__vector2 img:hover {
+        cursor: pointer;
+    }
     &__vector--arrow {
         @media (max-width: 700px) {
             width: 24px;

@@ -17,12 +17,15 @@
     &__nav a {
         @include font;
         color: $mainColor;
-        text-decoration: underline;
+        text-decoration: none;
         font-size: 24px;
         padding-left: 57px;
         @media (max-width: 700px) {
             font-size: 12px;
         }   
+    }
+    &__nav a.active {
+        text-decoration: underline;
     }
     &-display {
         @include space;
@@ -30,3 +33,9 @@
     }
 }
 
+.isActive {
+    text-decoration: underline;
+}
+.isPending {
+    text-decoration: none;
+}
